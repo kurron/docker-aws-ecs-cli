@@ -22,7 +22,7 @@ The `ecs.sh` script expects 3 variables to be specified in the environment and p
 #Tips and Tricks
 
 ##Verifying The Image
-`docker-compose up` will launch the image allowing you to begin working on projects. The Docker Compose file is 
+`docker-compose up` will launch the image you just built, verifying it works. The Docker Compose file is 
 configured to mount your home directory into the container.  
 
 ##Launching The Image
