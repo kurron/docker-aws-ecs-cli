@@ -1,6 +1,6 @@
 #Overview
 This project is a simple Docker image that runs the [Amazon ECS Command Line Interface](https://github.com/aws/amazon-ecs-cli/). 
-It saves you from having to install the required dependencies just run the command line.
+It saves you from having to install the required dependencies just to run the command line.
 
 #Prerequisites
 * a working [Docker](http://docker.io) engine
