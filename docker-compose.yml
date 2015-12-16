@@ -1,0 +1,15 @@
+aws:
+    build: .
+    labels:
+        org.kurron.description: "AWS CLI"
+        org.kurron.version: "1.9.3"
+    container_name: "aws"
+    net: "host"
+    volumes:
+        - /home/vagrant:/home/developer
+    environment:
+        AWS_ACCESS_KEY_ID: OVERRIDE ME 
+        AWS_SECRET_ACCESS_KEY: OVERRIDE_ME
+        AWS_REGION: us-west-2
+    user: 1000:1000
+    command: help
