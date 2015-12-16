@@ -1,5 +1,5 @@
 #Overview
-This project is a simple Docker image that runs the [AWS Command Line Interface](https://aws.amazon.com/cli/). 
+This project is a simple Docker image that runs the [Amazon ECS Command Line Interface](https://github.com/aws/amazon-ecs-cli/). 
 It saves you from having to install the required dependencies just run the command line.
 
 #Prerequisites
@@ -13,7 +13,7 @@ Type `docker-compose build` to build the image.
 Docker will automatically install the newly built image into the cache.
 
 ##Environment Variables
-The `aws.sh` script expects 3 variables to be specified in the environment and passes them onto the container:
+The `ecs.sh` script expects 3 variables to be specified in the environment and passes them onto the container:
 
 * AWS_ACCESS_KEY_ID
 * AWS_SECRET_ACCESS_KEY
@@ -26,8 +26,8 @@ The `aws.sh` script expects 3 variables to be specified in the environment and p
 configured to mount your home directory into the container.  
 
 ##Launching The Image
-Run `./aws.sh` and it will launch the container with the default command line argument of `--version`.  You can 
-feed different arguments to script and execute arbitrary AWS commands, eg. `./aws.sh configure`.
+Run `./ecs.sh` and it will launch the container with the default command line argument of `--version`.  You can 
+feed different arguments to script and execute arbitrary AWS commands, eg. `./ecs.sh configure`.
 
 #Troubleshooting
 
