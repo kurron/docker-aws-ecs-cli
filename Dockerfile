@@ -17,19 +17,9 @@ ENV HOME /home/developer
 # the user of this image is expected to mount his actual home directory to this one
 VOLUME ["/home/developer"]
 
-# the help switch seems to want this
-RUN apt-get update && \
-    apt-get install -y groff less && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/*
-
 ADD https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest /usr/local/bin/ecs-cli
 
 RUN chmod 555 /usr/local/bin/ecs-cli
-
-#RUN pip install --upgrade pip python-dateutil awscli
 
 # Set the AWS environment variables
 ENV AWS_ACCESS_KEY_ID OVERRIDE ME 
