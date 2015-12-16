@@ -1,9 +1,9 @@
-aws:
+ecs:
     build: .
     labels:
-        org.kurron.description: "AWS CLI"
-        org.kurron.version: "1.9.3"
-    container_name: "aws"
+        org.kurron.description: "ECS CLI"
+        org.kurron.version: "0.1.0"
+    container_name: "ecs"
     net: "host"
     volumes:
         - /home/vagrant:/home/developer

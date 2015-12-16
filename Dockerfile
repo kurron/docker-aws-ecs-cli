@@ -2,7 +2,7 @@ FROM python:latest
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.ide.name="AWS CLI" org.kurron.ide.version=1.9.3
+LABEL org.kurron.ide.name="AWS ECS CLI" org.kurron.ide.version=1.9.3
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -25,7 +25,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
-RUN pip install --upgrade pip python-dateutil awscli
+ADD https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest /usr/local/bin/ecs-cli
+
+RUN chmod 555 /usr/local/bin/ecs-cli
+
+#RUN pip install --upgrade pip python-dateutil awscli
 
 # Set the AWS environment variables
 ENV AWS_ACCESS_KEY_ID OVERRIDE ME 
@@ -34,5 +38,5 @@ ENV AWS_REGION us-west-2
 
 USER developer:developer
 WORKDIR /home/developer
-ENTRYPOINT ["/usr/local/bin/aws"]
+ENTRYPOINT ["/usr/local/bin/ecs-cli"]
 CMD ["--version"]
