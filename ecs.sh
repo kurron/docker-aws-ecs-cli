@@ -10,7 +10,7 @@ CMD="docker run \
        --env AWS_REGION=$AWS_REGION \
        --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $HOME:/home/developer \
-       kurron/docker-aws-ecs-cli:0.1.0"
+       kurron/docker-aws-ecs-cli:0.2.0"
 
 #eval echo $CMD $*
 eval $CMD $*
