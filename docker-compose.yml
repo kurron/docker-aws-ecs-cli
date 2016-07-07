@@ -2,6 +2,7 @@ version: '2'
 services:
     ecs:
         build: .
+        image: ecs:compose
         network_mode: "host"
         volumes:
             - /home/vagrant:/home/developer

@@ -2,7 +2,7 @@ FROM python:latest
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.name="AWS ECS CLI" org.kurron.version=0.3.0
+LABEL org.kurron.name="AWS ECS CLI" org.kurron.version=0.3.1
 
 ENV DEBIAN_FRONTEND noninteractive
 

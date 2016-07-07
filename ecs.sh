@@ -12,7 +12,7 @@ CMD="docker run \
        --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $HOME:/home/developer \
        --volume $(pwd):/pwd \
-       kurron/docker-aws-ecs-cli:0.3.0"
+       kurron/docker-aws-ecs-cli:0.3.1"
 
 #eval echo $CMD $*
 eval $CMD $*
